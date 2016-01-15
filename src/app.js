@@ -19,16 +19,29 @@ const defaultEvents = [
   }
 ];
 
+function makeEmptyEvent() {
+  return { name: '', description: '', date: '' };
+}
+
 new Vue({
 
   el: '#events',
 
   data: {
-    event: { name: '', description: '', date: '' },
+    event: makeEmptyEvent(),
     events: [] // Arrays will be wrapped by Vue.
   },
 
   ready() {
     this.events = defaultEvents;
+  },
+
+  methods: {
+    addEvent() {
+      if (this.event.name) {
+        this.events.push(this.event);
+        this.event = makeEmptyEvent();
+      }
+    }
   }
 });
