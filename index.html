@@ -84,6 +84,9 @@
             <p class="list-group-item-text" v-if="event.description">
               {{ event.description }}
             </p>
+            <button class="btn btn-xs btn-danger" @click="deleteEvent(event)">
+              Delete
+            </button>
           </a>
 
         </div>

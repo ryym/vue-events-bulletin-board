@@ -42,6 +42,12 @@ new Vue({
         this.events.push(this.event);
         this.event = makeEmptyEvent();
       }
+    },
+
+    deleteEvent(event) {
+      if (confirm("Are you sure you want to delete this event?")) {
+        this.events.$remove(event);
+      }
     }
   }
 });
