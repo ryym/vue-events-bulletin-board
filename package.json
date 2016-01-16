@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify src/app.js -o bundle.js -t [ babelify ]",
-    "watch": "watchify src/app.js -o bundle.js -t [ babelify ] -v"
+    "watch": "watchify src/app.js -o bundle.js -t [ babelify ] -v",
+    "start": "http-server"
   },
   "license": "ISC",
   "dependencies": {
